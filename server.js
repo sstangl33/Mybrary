@@ -12,6 +12,8 @@ const expressLayouts = require("express-ejs-layouts");
 
 // Require the router file for our server. The import path must be a relative link.
 const indexRouter = require("./routes/index");
+// Create router for the authors
+const authorRouter = require("./routes/authors");
 
 // Configure the express application:
 // Set the view engine to ejs.
@@ -19,11 +21,13 @@ app.set("view engine", "ejs");
 // Set the source for our views to the views directory.
 app.set("views", __dirname + "/views");
 // Hook-up express layouts
-app.set("layouts", "layouts/layout");
+app.set("layout", "layouts/layout");
 // Use express layouts for our express application.
 app.use(expressLayouts);
 // Use as the source for our public files (stylesheets, javascript, images, etc.)
 app.use(express.static("public"));
+// Use body-parser
+app.use(express.urlencoded({ limit: "10mb", extended: false }));
 
 // Import mongoDB
 const mongoose = require("mongoose");
@@ -40,6 +44,8 @@ db.once("open", () => console.error("Connected to Mongoose"));
 
 // Use the router defined by the indexRouter variable we set above. The first parameter is route path of our application.
 app.use("/", indexRouter);
+// Use the authorRouter. Pointer the first parameter to the authors folder instead of the root.
+app.use("/authors", authorRouter);
 
 // Listen to the port in our environment variable when deployed or port 3000 when developing.
 app.listen(process.env.PORT || 3000);
