@@ -200,7 +200,7 @@ Node.js/Express/MongoDB Course
 ---------------------------------------------
 
 YouTube link: https://youtu.be/Zi2UwhpooF8
-Lesson code: https://youtu.be/Zi2UwhpooF8
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.2
 
 Lesson Goals: Create the index, new, and create views for the books; and flesh-out the home page. There will be multi-part form uploads with files, and more complex search operations.
 
@@ -213,3 +213,17 @@ Also, we will need to set enctype of our form to "multipart/form-data".
 
 We will also need a library built into node.js named path.
 
+IMPORTANT: Heroku will not persist your files on the server. If the dynos are restarted your images and files will be deleted. A CDN is needed, but for this tutorial the images will be stored in the database. This is not an ideal solution.
+
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+04 - Books Index/Create/New Routes
+---------------------------------------------
+
+YouTube link: https://youtu.be/Xm5MzWvklbI
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.3
+
+Lesson Goals: Use the FilePond library (https://pqina.nl/filepond/) to upload files to the database.
+
+IMPORTANT: The filepond library will send a base64 string to the server instead of an image file. This means that we will be uploading a string instead of a file to the server, and we no longer need a multi-part image upload form, or multer, to handle image uploads.
