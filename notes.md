@@ -202,3 +202,14 @@ Node.js/Express/MongoDB Course
 YouTube link: https://youtu.be/Zi2UwhpooF8
 Lesson code: https://youtu.be/Zi2UwhpooF8
 
+Lesson Goals: Create the index, new, and create views for the books; and flesh-out the home page. There will be multi-part form uploads with files, and more complex search operations.
+
+A file form is a multi-part form. In order for our form to be able to upload cover images, we need to install an npm package named multer which will give our form the multi-part form capabilities. 
+
+Also, we will need to set enctype of our form to "multipart/form-data".
+```
+<form method="POST" action="/books" enctype="multipart/form-data">
+```
+
+We will also need a library built into node.js named path.
+
