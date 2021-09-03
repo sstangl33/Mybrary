@@ -218,7 +218,7 @@ IMPORTANT: Heroku will not persist your files on the server. If the dynos are re
 ---------------------------------------------
 
 Node.js/Express/MongoDB Course
-04 - Books Index/Create/New Routes
+04 - File Upload Setup
 ---------------------------------------------
 
 YouTube link: https://youtu.be/Xm5MzWvklbI
@@ -227,3 +227,22 @@ Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.3
 Lesson Goals: Use the FilePond library (https://pqina.nl/filepond/) to upload files to the database.
 
 IMPORTANT: The filepond library will send a base64 string to the server instead of an image file. This means that we will be uploading a string instead of a file to the server, and we no longer need a multi-part image upload form, or multer, to handle image uploads.
+
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+05 - Authors Show/Edit/Update/Delete Routes
+---------------------------------------------
+
+YouTube link: https://youtu.be/UIf1Lh9OZ-k
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.4
+
+Lesson Goals: Create the show, edit, update, and delete routes for the authors; create "pre" actions for our models to maintain data integrity; and learn how to debug issues that main arise when working on the backend of a server.
+
+IMPORTANT: Browsers can only make GET and POST requests. The Method Override library (https://www.npmjs.com/package/method-override) is needed to make PUT or DELETE requests.
+
+Fun Fact: The Google bots are one reason you never want to use a GET request to delete data. When the Google bots crawl a website, they will click on every link within a site's GET routes in order to index the site. If you use a tags to delete data within GET routes, the Google bots will click every one of these links and delete everything on your site. NEVER EVER USE A GET REQUEST TO DELETE DATA. ALWAYS USE A DELETE REQUEST.
+
+IMPORTANT: Anytime you have data that is associated to one another by an id, you must have "pre" actions in your data models to prevent them from being removed if there are other models referencing them. For example: in this lesson, we created a route to delete authors. However, we do not want to delete an author if there are books associated with that author's id. Therefore, in this lesson we added a "pre" action to the author's model that will check if any books are associated with an author's id before deleting the author. If the their are any associated books, the author will not be deleting and an error message will be displayed to the user. This operation is essential to maintain the data integrity of our application. Otherwise, there will be orphaned books that are not associated to any author, and this will lead to errors when we try to view these books.
+
+IMPORTANT: Show routes must appear after New routes in the code base. Otherwise, the server will think '/new' is the id parameter in the Show route.
