@@ -246,3 +246,14 @@ Fun Fact: The Google bots are one reason you never want to use a GET request to 
 IMPORTANT: Anytime you have data that is associated to one another by an id, you must have "pre" actions in your data models to prevent them from being removed if there are other models referencing them. For example: in this lesson, we created a route to delete authors. However, we do not want to delete an author if there are books associated with that author's id. Therefore, in this lesson we added a "pre" action to the author's model that will check if any books are associated with an author's id before deleting the author. If the their are any associated books, the author will not be deleting and an error message will be displayed to the user. This operation is essential to maintain the data integrity of our application. Otherwise, there will be orphaned books that are not associated to any author, and this will lead to errors when we try to view these books.
 
 IMPORTANT: Show routes must appear after New routes in the code base. Otherwise, the server will think '/new' is the id parameter in the Show route.
+
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+06 - Finish Backend
+---------------------------------------------
+
+YouTube link: https://youtu.be/GtTolway2H0
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.5
+
+Lesson Goals: Create the show, edit, update, and delete routes for the books.
