@@ -257,3 +257,18 @@ YouTube link: https://youtu.be/GtTolway2H0
 Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.5
 
 Lesson Goals: Create the show, edit, update, and delete routes for the books.
+
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+07 - General CSS Styles
+---------------------------------------------
+
+YouTube link: https://youtu.be/ToMlS8RjFiI
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.6
+
+Lesson Goals: Create all of the general CSS styles for our application. This includes the background color, all of the header styles, and the button styles.
+
+transfonter (https://transfonter.org/) is used to convert the fonts used in this lesson to web fonts.
+
+IMPORTANT:  In order to use Live Server for a Node.js site, you must install the Live Serve Web Extension for in your browser. 
