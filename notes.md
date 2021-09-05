@@ -272,3 +272,15 @@ Lesson Goals: Create all of the general CSS styles for our application. This inc
 transfonter (https://transfonter.org/) is used to convert the fonts used in this lesson to web fonts.
 
 IMPORTANT:  In order to use Live Server for a Node.js site, you must install the Live Serve Web Extension for in your browser. 
+
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+08 - Form CSS Styles
+---------------------------------------------
+
+YouTube link: https://youtu.be/iPKrpRpUOzQ
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.7
+
+Lesson Goals: Style all of the form inputs for our application, and apply all of the styles created in last lesson to the rest of the application.
+

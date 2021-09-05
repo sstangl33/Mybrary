@@ -41,15 +41,15 @@
   background-color: var(--color-btn-danger-background-dark);
 }
 
-.button-row {
+.btn-row {
   display: flex;
   align-items: flex-start;
 }
 
-.button-row > * {
+.btn-row > * {
   margin-left: 1rem;
 }
 
-.button-row > *:first-child {
+.btn-row > *:first-child {
   margin-left: 0;
 }
