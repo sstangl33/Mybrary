@@ -294,3 +294,5 @@ YouTube link: https://youtu.be/fagUbvlMjYQ
 Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.8
 
 Lesson Goals: Finish the app! 
+
+IMPORTANT: Check out /public/javascripts/fileUpload.js for notes on the nifty JavaScript that is used to style the filepond upload box. This is pretty clever!
