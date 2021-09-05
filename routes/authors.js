@@ -6,7 +6,10 @@ const Book = require("../models/book");
 
 // All authors route
 router.get("/", async (req, res) => {
+  // Create variable to store all of our search objects.
   let searchOptions = {};
+  // GET requests send information through the query string, and POST requests send data through the body. Since this is a GET request, we need to search the query (req.query.name).
+  // The "i" flag in the Regular Expression makes the search case-insensitive.
   if (req.query.name !== "" && req.query.name !== null) {
     searchOptions.name = new RegExp(req.query.name, "i");
   }
@@ -14,6 +17,7 @@ router.get("/", async (req, res) => {
     const authors = await Author.find(searchOptions);
     res.render("authors/index", {
       authors,
+      // Send the search options query back to the user to populate the existing author name fields.
       searchOptions: req.query,
     });
   } catch {
