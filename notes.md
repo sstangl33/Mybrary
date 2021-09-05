@@ -284,3 +284,13 @@ Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.7
 
 Lesson Goals: Style all of the form inputs for our application, and apply all of the styles created in last lesson to the rest of the application.
 
+---------------------------------------------
+
+Node.js/Express/MongoDB Course
+09 - Finish Project
+---------------------------------------------
+
+YouTube link: https://youtu.be/fagUbvlMjYQ
+Lesson code: https://github.com/WebDevSimplified/Mybrary/tree/v1.8
+
+Lesson Goals: Finish the app! 
